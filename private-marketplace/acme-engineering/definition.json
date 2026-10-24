@@ -1,0 +1,25 @@
+{
+  "id": "acme-engineering",
+  "version": "1.4.0",
+  "description": "Apply Acme engineering standards to code changes and give every session the team's working context.",
+  "skills": [
+    "skills/change-review"
+  ],
+  "assets": ["automation"],
+  "executables": [],
+  "mcp": {},
+  "hooks": {
+    "engineering-context": {
+      "event": "SessionStart",
+      "command": "node",
+      "args": [{ "file": "automation/session-context.mjs" }],
+      "timeout": 10
+    }
+  },
+  "publish": {
+    "type": "git",
+    "repository": "git@github.com:acme/agent-plugins.git",
+    "branch": "main",
+    "marketplace": "acme"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "schemaloom-docs",
+  "version": "1.2.0",
+  "description": "Answer Schemaloom configuration and command questions from the versioned project documentation.",
+  "skills": [
+    "skills/schemaloom-docs"
+  ],
+  "mcp": {
+    "docs": {
+      "url": "https://docs.schemaloom.dev/mcp",
+      "headers": {}
+    }
+  },
+  "publish": {
+    "type": "git",
+    "repository": "https://github.com/schemaloom/agent-plugins.git",
+    "branch": "main",
+    "marketplace": "schemaloom"
+  }
+}

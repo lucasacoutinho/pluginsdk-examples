@@ -1,0 +1,24 @@
+{
+  "id": "schemaloom",
+  "version": "0.9.0",
+  "description": "Review Schemaloom database migrations and plan zero-downtime schema changes.",
+  "skills": [
+    "skills/review-migration",
+    "skills/plan-schema-change"
+  ],
+  "assets": ["server"],
+  "executables": [],
+  "mcp": {
+    "schemaloom": {
+      "type": "stdio",
+      "command": "node",
+      "args": [{ "file": "server/index.mjs" }]
+    }
+  },
+  "publish": {
+    "type": "git",
+    "repository": "https://github.com/schemaloom/agent-plugins.git",
+    "branch": "main",
+    "marketplace": "schemaloom"
+  }
+}
