@@ -24,7 +24,7 @@
   },
   "publish": {
     "type": "git",
-    "repository": "git@github.com:acme/agent-plugins.git",
+    "repository": "git@github.com:lucasacoutinho/pluginsdk-examples.git",
     "branch": "main",
     "marketplace": "acme"
   }

@@ -6,19 +6,25 @@
     "skills/review-migration",
     "skills/plan-schema-change"
   ],
-  "assets": ["server"],
+  "assets": [
+    "server"
+  ],
   "executables": [],
   "mcp": {
     "schemaloom": {
       "type": "stdio",
       "command": "node",
-      "args": [{ "file": "server/index.mjs" }]
+      "args": [
+        {
+          "file": "server/index.mjs"
+        }
+      ]
     }
   },
   "publish": {
     "type": "git",
-    "repository": "https://github.com/schemaloom/agent-plugins.git",
-    "branch": "main",
+    "repository": "git@github.com:lucasacoutinho/pluginsdk-examples.git",
+    "branch": "schemaloom",
     "marketplace": "schemaloom"
   }
 }

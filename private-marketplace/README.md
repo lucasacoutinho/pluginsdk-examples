@@ -1,31 +1,32 @@
 # Private marketplace for internal plugins
 
-Acme's platform team publishes internal plugins to a private Git repository. The plugins connect to internal MCP services, and the services keep enforcing each user's access.
+Acme's platform team publishes internal plugins to a private Git repository: the root of this repository's `main` branch. The plugins connect to internal MCP services, and the services keep enforcing each user's access.
 
-Three plugins share the `acme` marketplace:
+Four plugins share the `acme` marketplace:
 
 | Plugin | Features | Purpose |
 | --- | --- | --- |
 | [acme-engineering](acme-engineering/) | Skill, `SessionStart` hook | Reviews changes against engineering standards. Adds the team's working context to every session. |
 | [acme-data](acme-data/) | Skill, shared agent, two remote MCP services | Answers business questions from the warehouse with certified tables and data handling rules. |
-| [platform-tools](../platform-tools/) | Two skills, two remote MCP services | Incident triage and release readiness. Described in the [examples overview](../README.md#operations-across-internal-applications). |
+| [platform-tools](../platform-tools/) | Two skills, two remote MCP services | Incident triage and release readiness over the service catalog and deployment service. |
+| [release-notes](../release-notes/) | Skill, template | Drafts release notes from a Git range. |
 
-All three definitions use the same destination:
+All four definitions use the same destination:
 
 ```json
 "publish": {
   "type": "git",
-  "repository": "git@github.com:acme/agent-plugins.git",
+  "repository": "git@github.com:lucasacoutinho/pluginsdk-examples.git",
   "branch": "main",
   "marketplace": "acme"
 }
 ```
 
-Each plugin can have its own owning team and release schedule. Publishing one plugin keeps the others' entries and files in the repository.
+Each plugin can have its own owning team and release schedule. To connect the marketplace to Claude or ChatGPT, follow the [repository README](../README.md#connect-to-claude). Publishing one plugin keeps the others' entries and files in the repository.
 
 ## Build and preview
 
-Replace the `.acme.internal` URLs with your existing endpoints. Then, after [setup](../README.md#set-up), from the repository root:
+Replace the `.acme.internal` URLs with your existing endpoints. Then, after [setup](../README.md#develop-locally), from the repository root:
 
 ```sh
 cd private-marketplace/acme-data
@@ -45,7 +46,7 @@ With `acme-engineering`, ask:
 
 ## Release with approval
 
-Publishing to the internal repository is enough for a team that installs from the marketplace directly. Replace the repository with your own and run `npx pluginsdk build && npx pluginsdk publish` in each plugin directory. Developers install with the commands in [Publish a plugin](https://github.com/lucasacoutinho/pluginsdk/blob/main/docs/publishing.md#install-the-published-plugin), using `acme` as the marketplace.
+Publishing to the repository is enough when the organization's Claude or ChatGPT admin settings control who can install each plugin. Developers who use the Claude Code or Codex CLI directly can also install with the commands in [Publish a plugin](https://github.com/lucasacoutinho/pluginsdk/blob/main/docs/publishing.md#install-the-published-plugin), using `acme` as the marketplace.
 
 When releases need approval before they reach developers, use the release catalog:
 

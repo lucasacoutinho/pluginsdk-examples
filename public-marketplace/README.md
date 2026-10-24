@@ -1,6 +1,6 @@
 # Public marketplace for an open-source tool
 
-Schemaloom is a fictional open-source database migration CLI. Its maintainers publish agent plugins from a public GitHub repository so users can install them in Claude Code or Codex next to the tool.
+Schemaloom is a fictional open-source database migration CLI. Its maintainers publish agent plugins from a public GitHub repository so users can install them in Claude Code or Codex next to the tool. In this repository, the marketplace is published to the `schemaloom` branch.
 
 The marketplace has two plugins. Both definitions publish to the same repository, branch and marketplace name:
 
@@ -23,7 +23,7 @@ schemaloom-docs/
 
 ## Try the tool plugin
 
-After [setup](../README.md#set-up), from the repository root:
+After [setup](../README.md#develop-locally), from the repository root:
 
 ```sh
 cd public-marketplace/schemaloom
@@ -51,33 +51,35 @@ Each definition has the same destination:
 ```json
 "publish": {
   "type": "git",
-  "repository": "https://github.com/schemaloom/agent-plugins.git",
-  "branch": "main",
+  "repository": "git@github.com:lucasacoutinho/pluginsdk-examples.git",
+  "branch": "schemaloom",
   "marketplace": "schemaloom"
 }
 ```
 
-Replace the repository with one you can push to, then build and publish each plugin from its directory:
+Build and publish each plugin from its directory:
 
 ```sh
 cd public-marketplace/schemaloom && npx pluginsdk build && npx pluginsdk publish
 cd ../schemaloom-docs && npx pluginsdk build && npx pluginsdk publish
 ```
 
-The second publication adds its entry and keeps the first. The repository then contains the Claude Code index in `.claude-plugin/marketplace.json`, the Codex index in `.agents/plugins/marketplace.json`, and the captured packages under `plugins/`. Release a plugin on its own schedule by incrementing its version and publishing again.
+The second publication adds its entry and keeps the first. The `schemaloom` branch then contains the Claude Code index in `.claude-plugin/marketplace.json`, the Codex index in `.agents/plugins/marketplace.json`, and the captured packages under `plugins/`. Release a plugin on its own schedule by incrementing its version and publishing again.
 
 ## Install as a user
 
 ```sh
-git clone https://github.com/schemaloom/agent-plugins.git
+git clone --branch schemaloom git@github.com:lucasacoutinho/pluginsdk-examples.git schemaloom-plugins
 
 # Claude Code
-claude plugin marketplace add ./agent-plugins --scope user
+claude plugin marketplace add ./schemaloom-plugins --scope user
 claude plugin install schemaloom@schemaloom --scope user
 
 # Codex
-codex plugin marketplace add ./agent-plugins
+codex plugin marketplace add ./schemaloom-plugins
 codex plugin add schemaloom@schemaloom
 ```
+
+A ChatGPT Enterprise workspace can import the same marketplace by entering `schemaloom` as the branch. A Claude organization marketplace cannot use it: Claude reads the repository root of the followed branch, and a real Schemaloom marketplace would be a public repository, which organization marketplaces do not accept. Claude users install it in Claude Code instead.
 
 Pull the checkout to get new releases, then update the plugin in the client. See [Publish a plugin](https://github.com/lucasacoutinho/pluginsdk/blob/main/docs/publishing.md) for the destination rules.

@@ -5,5 +5,11 @@
   "skills": [
     "skills/release-notes"
   ],
-  "mcp": {}
+  "mcp": {},
+  "publish": {
+    "type": "git",
+    "repository": "git@github.com:lucasacoutinho/pluginsdk-examples.git",
+    "branch": "main",
+    "marketplace": "acme"
+  }
 }
