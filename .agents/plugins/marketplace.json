@@ -1,0 +1,1 @@
+{"name":"acme","plugins":[{"category":"Productivity","name":"acme-engineering","policy":{"authentication":"ON_INSTALL","installation":"AVAILABLE"},"source":{"path":"./plugins/acme-engineering/720cc2c9a0e415393c3a7ddf723cf9fd991a059b5a56541122f91dfe9b06ace5/codex","source":"local"}}]}
