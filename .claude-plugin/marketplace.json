@@ -1,1 +1,1 @@
-{"name":"schemaloom","owner":{"name":"schemaloom"},"plugins":[{"name":"schemaloom","source":"./plugins/schemaloom/ff23b8bb1285b19ad81c8c234d2594f3e7918017ee90a0feea987c21891d6349/claude_code"}]}
+{"name":"schemaloom","owner":{"name":"schemaloom"},"plugins":[{"name":"schemaloom","source":"./plugins/schemaloom/ff23b8bb1285b19ad81c8c234d2594f3e7918017ee90a0feea987c21891d6349/claude_code"},{"name":"schemaloom-docs","source":"./plugins/schemaloom-docs/3c2d135f64a00afcb998beb505b0dbe0d0ce8de558703f5bdd93996033e1d373/claude_code"}]}
