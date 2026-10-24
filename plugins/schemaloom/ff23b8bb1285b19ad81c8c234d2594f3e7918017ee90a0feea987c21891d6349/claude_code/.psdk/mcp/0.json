@@ -1,0 +1,1 @@
+{"posix":".psdk/mcp/0.sh","schema":1,"script":{"args":[3],"captures":[],"command":1,"cwd":2,"environment":[],"names":[],"snapshot":[{"type":"literal","value":"node"},{"type":"root"},{"path":"server/index.mjs","type":"file"}]}}

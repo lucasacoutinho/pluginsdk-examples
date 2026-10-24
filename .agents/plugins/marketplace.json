@@ -1,0 +1,1 @@
+{"name":"schemaloom","plugins":[{"category":"Productivity","name":"schemaloom","policy":{"authentication":"ON_INSTALL","installation":"AVAILABLE"},"source":{"path":"./plugins/schemaloom/ff23b8bb1285b19ad81c8c234d2594f3e7918017ee90a0feea987c21891d6349/codex","source":"local"}}]}

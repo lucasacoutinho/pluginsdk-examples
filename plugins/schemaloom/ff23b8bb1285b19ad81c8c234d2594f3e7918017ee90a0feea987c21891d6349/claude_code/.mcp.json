@@ -1,0 +1,1 @@
+{"mcpServers":{"schemaloom":{"args":["${CLAUDE_PLUGIN_ROOT}/.psdk/runtime/process.mjs","${CLAUDE_PLUGIN_ROOT}",".psdk/mcp/0.json"],"command":"node","env":{},"type":"stdio"}}}

@@ -1,0 +1,1 @@
+{"mcpServers":{"schemaloom":{"args":[".psdk/runtime/process.mjs",".",".psdk/mcp/0.json"],"command":"node","cwd":".","env":{}}}}
