@@ -1,0 +1,5 @@
+[database]
+url_env = "DATABASE_URL"
+
+[migrations]
+directory = "migrations"
