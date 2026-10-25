@@ -1,1 +1,0 @@
-{"mcpServers":{"deployments":{"headers":{},"type":"http","url":"https://deployments.acme.internal/mcp"},"services":{"headers":{},"type":"http","url":"https://services.acme.internal/mcp"}}}

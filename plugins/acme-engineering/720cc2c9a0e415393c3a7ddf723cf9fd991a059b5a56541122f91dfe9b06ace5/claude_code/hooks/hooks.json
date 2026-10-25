@@ -1,1 +1,0 @@
-{"hooks":{"SessionStart":[{"hooks":[{"args":["${CLAUDE_PLUGIN_ROOT}/.psdk/runtime/process.mjs","${CLAUDE_PLUGIN_ROOT}",".psdk/hooks/0.json"],"async":false,"command":"node","timeout":10,"type":"command"}]}]}}
