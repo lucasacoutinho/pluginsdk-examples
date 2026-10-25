@@ -1,0 +1,1 @@
+{"name":"platform-tools","plugins":[{"category":"Productivity","name":"platform-tools","policy":{"authentication":"ON_INSTALL","installation":"AVAILABLE"},"source":{"path":"./plugins/platform-tools/8cd0fc93d3cb98bb72cbfdd5df49b32c6cc204f254ef8e355a624ccd3959508d/codex","source":"local"}}]}
